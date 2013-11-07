@@ -1,0 +1,28 @@
+# Set this to where you want to keep your environments.
+# /etc/puppet/environments is a reasonable default.
+#ENVIRONMENT_BASEDIR: "/etc/puppet/environments"
+
+# The full name of the original, production puppet repo on GitHub.
+# Environments will be created for branches in this repo and any of its forks.
+PRODUCTION_REPO: 'puppeteers/prod-puppet'
+
+# user@hostname of the git server for SSH access
+GIT_SSH_USERHOSTNAME = "git@ourgitlab.example"
+
+# GitLab v3 API URL base
+GITLAB_API_BASE: 'https://ourgitlab.example/api/v3/'
+
+# GitLab private token
+GITLAB_PRIVATE_TOKEN: 'YOUR_TOKEN_HERE'
+
+# Mapping of branches to directories for PRODUCTION_REPO (forks are not mapped).
+BRANCH_MAP:
+  # This will clone/pull the master branch into the development puppet environment
+  # master: 'development'
+
+# Set this to a group the puppet user is a member of
+PUPPET_GROUP: "puppet"
+
+# Set this to the octal mode the environment should have
+ENVIRONMENT_MODE: 0750
+
